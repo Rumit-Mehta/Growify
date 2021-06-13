@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int DELAY = 1000;
+    private static int DELAY = 700;
 
     //variables
     Animation logoAnim;
@@ -34,14 +34,14 @@ public class MainActivity extends AppCompatActivity {
             Window window = this.getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            window.setStatusBarColor(this.getResources().getColor(R.color.grey));
+            window.setStatusBarColor(this.getResources().getColor(R.color.grey,getTheme()));
         }
 
         //animation
         logoAnim = AnimationUtils.loadAnimation(this,R.anim.spashscreen_anim);
 
         //Logo
-        TextView logo = (TextView) findViewById(R.id.logo);
+        TextView logo = findViewById(R.id.logo);
         Shader shader = new LinearGradient(0f, 0f, 0f, logo.getTextSize(), Color.parseColor("#30cfd0"), Color.parseColor("#330867"), Shader.TileMode.CLAMP);
         Paint paint = new Paint();
         logo.getPaint().setShader(shader);
