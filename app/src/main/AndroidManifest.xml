@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SplashScreen">
-        <activity android:name=".HomeActivity"
+        <activity android:name=".LoginActivity"
             android:label="Home"
             android:theme="@style/Theme.Growify"></activity>
         <activity
